@@ -47,6 +47,40 @@
     padding: 15px;
   }
 
+  .navbar-close {
+    animation: fadeOut 1s ease-in-out;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      /* transform: translateY(0); */
+    }
+    100% {
+      opacity: 0;
+      /* transform: translateY(2rem); */
+    }
+  }
+
+  .navbar-open {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      height: var(--prevHeight);
+      /* opacity: 0; */
+      /* transform: translateY(2rem); */
+    }
+
+    100% {
+      /* height: var(--height); */
+      height: var(--height);
+      /* opacity: 1; */
+      /* transform: translateY(0); */
+    }
+  }
+
   .logo-div {
     display: flex;
     justify-content: space-between;
