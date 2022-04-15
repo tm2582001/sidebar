@@ -7,3 +7,28 @@
     margin-right: 10px;
     border-bottom: 1px solid rgba(0,0,0,0.3);
 }
+
+.date-slot-div{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.slot-div{
+    display: flex;
+    margin: 15px 0 15px 15px;
+}
+
+.booking{
+    margin: 10px 5px 5px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(245, 222, 179,0.6);
+    font-weight: 600;
+    font-size: 18px;
+    border: 3px solid gold;
+}
+
+.booking:hover{
+    background: rgba(245, 222, 179,1);
+}
