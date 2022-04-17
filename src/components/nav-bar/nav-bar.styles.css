@@ -48,36 +48,29 @@
   }
 
   .navbar-close {
-    animation: fadeOut 1s ease-in-out;
+    animation: heightDecrease 0.3s ease-in-out;
   }
 
-  @keyframes fadeOut {
+  @keyframes heightDecrease {
     0% {
-      opacity: 1;
-      /* transform: translateY(0); */
+      height: var(--prevHeight);
     }
     100% {
-      opacity: 0;
-      /* transform: translateY(2rem); */
+      height: var(--height);
     }
   }
 
   .navbar-open {
-    animation: fadeIn 1s ease-in-out;
+    animation: heightIncrese 0.4s ease-in-out;
   }
 
-  @keyframes fadeIn {
+  @keyframes  heightIncrese{
     0% {
       height: var(--prevHeight);
-      /* opacity: 0; */
-      /* transform: translateY(2rem); */
     }
 
     100% {
-      /* height: var(--height); */
       height: var(--height);
-      /* opacity: 1; */
-      /* transform: translateY(0); */
     }
   }
 
@@ -98,7 +91,22 @@
 
   .nav-bar-button-div.open {
     display: block;
+    animation-delay: 0.2s;
+    animation: fadeIn 0.4s ease-in-out;
   }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 
   .nav-bar-button-div {
     display: none;

@@ -23,16 +23,20 @@ class NavBar extends React.Component{
     this.setState((prevState)=>({
       isOpen: !prevState.isOpen
     }),()=>{
-      this.setState({
-        height:this.navBar.current.scrollHeight
-      })
+      if(!this.state.height){
+
+        this.setState({
+          height:this.navBar.current.scrollHeight
+        })
+      }else{
+        this.setState((prevState)=>({
+          prevHeight: prevState.height,
+          height:this.navBar.current.scrollHeight
+        }))
+      }
       // console.log(this.state.height)
     })
   }
-  
-  // componentDidUpdate(){
-
-  // }
 
   render(){
     return(
@@ -44,7 +48,7 @@ class NavBar extends React.Component{
           <h1 className="logo">Mentor Plus</h1>
           <NavBarIcon onClick={this.toggleNavigation} className={`nav-bar-icon ${this.state.isOpen?"active":""}`} />
         </div>
-        <div className={`nav-bar-button-div ${this.state.isOpen?"open":""}`}>
+        <div className={`nav-bar-button-div ${this.state.isOpen?"open":"close"}`}>
           <div className="nav-bar-button">
             <h3>Home</h3>
           </div>
