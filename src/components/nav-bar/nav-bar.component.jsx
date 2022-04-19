@@ -45,11 +45,11 @@ class NavBar extends React.Component{
       ref={this.navBar}
       >
         <div className="logo-div">
-          <h1 className="logo">Mentor Plus</h1>
+          <h1 className="logo">Mentor <span className="red-logo">Plus</span></h1>
           <NavBarIcon onClick={this.toggleNavigation} className={`nav-bar-icon ${this.state.isOpen?"active":""}`} />
         </div>
         <div className={`nav-bar-button-div ${this.state.isOpen?"open":"close"}`}>
-          <div className="nav-bar-button">
+          <div className="nav-bar-button active-navbar-button">
             <h3>Home</h3>
           </div>
           <div className="nav-bar-button">

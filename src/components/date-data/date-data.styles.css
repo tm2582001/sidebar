@@ -8,7 +8,8 @@
 
 .active-slot{
     color: #fff;
-    background: #5DBB63;
+    /* background: #5DBB63; */
+    background: #289125;
 }
 
 .date{
@@ -16,3 +17,8 @@
     font-weight: 600;
 }
 
+@media (max-width: 850px) {
+    .active-slot{
+        background: #1e4d8e;
+    }
+}
